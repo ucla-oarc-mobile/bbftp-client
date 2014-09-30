@@ -1,0 +1,56 @@
+
+    Configuring the client
+
+   In the bbftpc directory, run:
+   % ./configure
+
+   The configure script accepts the following standard options:
+
+   --prefix=DIR Defines the directory to install BBFTP client
+
+   The configure script accepts the following additional options:
+
+   --with-gzip Enable compression (automatic search + dynamic link if
+   possible) (DEFAULT)
+   --with-gzip=DIR Enable compression where libs are in DIR/lib and
+   includes in DIR/include (static link)
+   --without-gzip Disable compression
+   --with-ssl Enable encryption (automatic search + dynamic link if
+   possible) (DEFAULT)
+   --with-ssl=DIR Enable encryption where libs are in DIR/lib and
+   includes in DIR/include (static link)
+   --without-ssl Disable OpenSSL encryption. Cannot be used in private
+   authentication mode
+   --with-rfio Enable RFIO interface (automatic search in "/usr/local" +
+   static link) (DEFAULT)
+   --with-rfio=DIR Enable RFIO interface where libs are in DIR/lib and
+   includes in DIR/include (static link)
+   --without-rfio Disable RFIO interface
+   --with-afs Use AFS for standard authentication
+   --with-afs=DIR Use AFS for standard authentication where libs are in
+   DIR/lib and includes in DIR/include
+   --without-afs Do not use AFS for standard authentication (DEFAULT)
+   --enable-authentication=private Use the private authentication module.
+   This mode requires OpenSSL
+   --enable-authentication=certificates Use the certificate
+   authentication module
+
+   The following options should be used in certificate mode only:
+
+   --with-gsi=DIR Defines where to find the Globus GSI software
+   (DEFAULT=$GLOBUS_LOCATION or "/opt/globus", static link)
+
+    Building the client
+
+   In the bbftpc directory, run:
+   % make
+
+    Installing the client
+
+   In the bbftpc directory, run:
+   % make install
+
+    Binary Windows installation
+
+   unzip the file bbftp-VERSION-client-cygwin.zip. The file cygwin1.dll
+   must be installed in the same directory.
